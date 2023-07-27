@@ -2,26 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.input{
+  @apply border border-gray-200 p-2 rounded-md my-2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.label{
+  @apply text-black text-sm; 
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* styles.css */
+.input-container {
+  @apply inline-block relative;
+}
+
+.input-container input {
+  @apply py-3 px-4 border border-gray-300 rounded outline-none transition-colors duration-200 w-full;
+}
+
+/* Focus style */
+.input-container input:focus {
+  @apply border-teal-600 ;
 }
